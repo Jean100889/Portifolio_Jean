@@ -1,9 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jean Carlos | IoT, Web & Automação</title>
+  <title>Jean Carlos | Engenharia de Software & Fullstack</title>
+  <meta name="description" content="Jean Carlos — engenheiro de software em formação e desenvolvedor fullstack júnior. Crio aplicações web, dashboards IoT e automações que conectam front-end, back-end e hardware.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jean Carlos | Engenharia de Software & Fullstack">
+  <meta property="og:description" content="Aplicações web, integrações IoT e automação para agro, indústria e produtos digitais.">
+  <meta property="og:image" content="img/jean.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jean Carlos | Engenharia de Software & Fullstack">
+  <meta name="twitter:description" content="Dev fullstack júnior com IoT. Dashboards, APIs, automação e entregas enxutas.">
+  <meta name="twitter:image" content="img/jean.jpg">
+  <link rel="icon" href="img/jean.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,14 +27,12 @@
         <span class="logo-mark">JC</span>
         <div class="logo-text">
           <h1>Jean Carlos</h1>
-          <p>IoT, Automação & Desenvolvimento Web</p>
+          <p>Engenharia de Software em formação, Fullstack Jr & IoT</p>
         </div>
       </div>
-
       <button class="menu-toggle" id="menuToggle">
         ☰
       </button>
-
       <nav class="nav" id="navMenu">
         <a href="#hero">Início</a>
         <a href="#services">Serviços</a>
@@ -30,230 +42,425 @@
       </nav>
     </div>
   </header>
-
   <main>
     <!-- Hero / Apresentação -->
     <section class="hero" id="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <p class="hero-tag">Engenharia • IoT • Agrocomputação • Web</p>
-          <h2>Conecto máquinas, dados e pessoas com soluções IoT e sistemas web sob medida.</h2>
+          <p class="hero-tag">Engenharia de Software • Fullstack • IoT • Web</p>
+          <h2>Eng. Mecânico e Dev Fullstack Jr conectando hardware, software e dados.</h2>
           <p>
-            Engenheiro Mecânico, especialista em IoT pelo SENAI e estudante de Agrocomputação na FAZU.
-            Desenvolvo dashboards IoT, sistemas web e projetos de automação focados em resultados reais
-            para o agro e para a indústria.
+            Em formação em Engenharia de Software (Alura) e Agrocomputação (FAZU), com especialização técnica em IoT pelo SENAI.
+            Atuo com Java/Spring Boot, Node.js, Angular/JS, MQTT e bancos como MySQL/MongoDB para criar dashboards, APIs,
+            automações e integrações IoT que resolvem problemas reais no agro, indústria e serviços.
           </p>
           <div class="hero-actions">
             <a href="#services" class="btn primary">Ver serviços</a>
             <a href="#portfolio" class="btn secondary">Ver portfólio</a>
           </div>
-
           <div class="hero-info-strip">
             <div>
               <span class="strip-label">Stack</span>
-              <span class="strip-value">ESP32, MQTT, APIs, JS, Dashboards</span>
+              <span class="strip-value">Java/Spring Boot, Node.js, Angular/JS, MQTT, MySQL/MongoDB</span>
             </div>
             <div>
               <span class="strip-label">Atuação</span>
-              <span class="strip-value">Agro, Indústria & Web</span>
+              <span class="strip-value">Fullstack, IoT/Automação, Agro & Web</span>
             </div>
           </div>
         </div>
-
         <div class="hero-right">
-          <!-- SUA FOTO AQUI -->
           <div class="hero-photo-wrapper">
             <div class="hero-photo-border"></div>
             <img
-              src="img/jean-profile.jpg"
+              src="img/jean.jpg"
               alt="Foto de Jean Carlos"
               class="hero-photo"
             />
           </div>
-
           <div class="hero-card hero-card-compact">
             <h3>Jean Carlos</h3>
-            <p class="hero-role">IoT, Automação & Desenvolvimento Web</p>
+            <p class="hero-role">Eng. Mecânico | Eng. Software (em formação) | Fullstack Jr & IoT</p>
             <ul>
-              <li>Engenharia Mecânica + IoT + Agrocomputação</li>
-              <li>Dashboards IoT, APIs, MQTT, ESP32</li>
-              <li>Foco em soluções simples e funcionais</li>
+              <li>Java/Spring Boot, Node.js, Angular/JS, PHP</li>
+              <li>MQTT/ESP32, automação, dashboards tempo real</li>
+              <li>APIs, REST, MySQL/MongoDB, AWS/Firebase</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
+    <section class="tech-ticker" aria-label="Tecnologias que utilizo">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5 5 12l4 7M15 5l4 7-4 7" />
+            </svg>
+            HTML5
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 4c-2 0-3 2-3 4v1l-2 3 2 3v1c0 2 1 4 3 4" />
+              <path d="M14 4c2 0 3 2 3 4v1l2 3-2 3v1c0 2-1 4-3 4" />
+            </svg>
+            CSS3
+          </span>
+          <span class="chip">
+            <svg class="chip-icon chip-icon-text" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="5" y="17" font-size="11" font-weight="700">JS</text>
+            </svg>
+            JavaScript
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 7.5 12 5l4 2.5v5L12 15l-4-2.5z" />
+              <path d="M12 15v4" />
+            </svg>
+            Node.js
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5h4a2 2 0 0 1 2 2v3H9a2 2 0 0 0 0 4h4" />
+              <path d="M13 19H9a2 2 0 0 1-2-2v-3h6" />
+            </svg>
+            Python
+          </span>
+          <span class="chip">
+            <svg class="chip-icon chip-icon-text" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="4" y="17" font-size="10" font-weight="700">PHP</text>
+            </svg>
+            PHP
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6h6a3 3 0 0 1 0 6H9" />
+              <path d="M10 12v4a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-4" />
+              <path d="M8 18h8" />
+              <path d="M11 4c0 1 .6 1.6 1 2" />
+            </svg>
+            Java
+          </span>
+          <span class="chip">
+            <svg class="chip-icon chip-icon-text" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="4" y="17" font-size="10" font-weight="700">C++</text>
+            </svg>
+            C++
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6c0-2 12-2 12 0v12c0 2-12 2-12 0Z" />
+              <path d="M18 10c0 2-12 2-12 0" />
+              <path d="M18 14c0 2-12 2-12 0" />
+            </svg>
+            Banco de dados
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="1.2" />
+              <path d="M12 5c3.5 0 6.5 3 6.5 7" />
+              <path d="M12 7.5c2.4 0 4.5 2.1 4.5 4.7" />
+              <path d="M12 10c1.3 0 2.5 1.2 2.5 2.7" />
+            </svg>
+            MQTT / IoT
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 15 7 17a3 3 0 0 1-4.24-4.24L5 11" />
+              <path d="M15 9 17 7a3 3 0 1 1 4.24 4.24L19 13" />
+              <path d="M8 12h8" />
+            </svg>
+            APIs REST
+          </span>
+        </div>
+        <div class="ticker-group">
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5 5 12l4 7M15 5l4 7-4 7" />
+            </svg>
+            HTML5
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 4c-2 0-3 2-3 4v1l-2 3 2 3v1c0 2 1 4 3 4" />
+              <path d="M14 4c2 0 3 2 3 4v1l2 3-2 3v1c0 2-1 4-3 4" />
+            </svg>
+            CSS3
+          </span>
+          <span class="chip">
+            <svg class="chip-icon chip-icon-text" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="5" y="17" font-size="11" font-weight="700">JS</text>
+            </svg>
+            JavaScript
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 7.5 12 5l4 2.5v5L12 15l-4-2.5z" />
+              <path d="M12 15v4" />
+            </svg>
+            Node.js
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5h4a2 2 0 0 1 2 2v3H9a2 2 0 0 0 0 4h4" />
+              <path d="M13 19H9a2 2 0 0 1-2-2v-3h6" />
+            </svg>
+            Python
+          </span>
+          <span class="chip">
+            <svg class="chip-icon chip-icon-text" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="4" y="17" font-size="10" font-weight="700">PHP</text>
+            </svg>
+            PHP
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6h6a3 3 0 0 1 0 6H9" />
+              <path d="M10 12v4a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-4" />
+              <path d="M8 18h8" />
+              <path d="M11 4c0 1 .6 1.6 1 2" />
+            </svg>
+            Java
+          </span>
+          <span class="chip">
+            <svg class="chip-icon chip-icon-text" viewBox="0 0 24 24" aria-hidden="true">
+              <text x="4" y="17" font-size="10" font-weight="700">C++</text>
+            </svg>
+            C++
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6c0-2 12-2 12 0v12c0 2-12 2-12 0Z" />
+              <path d="M18 10c0 2-12 2-12 0" />
+              <path d="M18 14c0 2-12 2-12 0" />
+            </svg>
+            Banco de dados
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="1.2" />
+              <path d="M12 5c3.5 0 6.5 3 6.5 7" />
+              <path d="M12 7.5c2.4 0 4.5 2.1 4.5 4.7" />
+              <path d="M12 10c1.3 0 2.5 1.2 2.5 2.7" />
+            </svg>
+            MQTT / IoT
+          </span>
+          <span class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 15 7 17a3 3 0 0 1-4.24-4.24L5 11" />
+              <path d="M15 9 17 7a3 3 0 1 1 4.24 4.24L19 13" />
+              <path d="M8 12h8" />
+            </svg>
+            APIs REST
+          </span>
+        </div>
+      </div>
+    </section>
     <!-- Serviços -->
     <section class="section" id="services">
       <div class="container">
         <h2 class="section-title">Catálogo de Serviços</h2>
         <p class="section-subtitle">
-          Soluções completas em IoT, automação, dashboards, sites e sistemas sob medida.
+          Soluções em desenvolvimento web, integrações IoT e automação para tirar ideias do papel com entregas claras.
         </p>
-
         <div class="cards-grid">
-          <!-- IoT & Automação -->
           <article class="card">
-            <h3>Dashboards IoT Personalizados</h3>
+            <h3>Aplicações Web Fullstack</h3>
+            <p class="card-price">R$ 800 a R$ 3.500</p>
+            <ul class="card-list">
+              <li>APIs REST em Node.js</li>
+              <li>Autenticação, painel admin e dashboards</li>
+              <li>Integração com bancos de dados e serviços</li>
+              <li>Entrega documentada e testada</li>
+            </ul>
+            <p class="card-tag">Para quem precisa tirar uma ideia do papel com um MVP sólido.</p>
+          </article>
+          <article class="card">
+            <h3>Sites e Landing Pages Profissionais</h3>
             <p class="card-price">R$ 500 a R$ 2.000</p>
             <ul class="card-list">
-              <li>Visualização em tempo real</li>
-              <li>Gráficos, indicadores e histórico</li>
-              <li>Alertas por WhatsApp/Telegram</li>
-              <li>Integração com sensores, APIs, MQTT ou Modbus</li>
+              <li>Site moderno, responsivo e rápido</li>
+              <li>Páginas de serviços/produtos com copy leve</li>
+              <li>Formulário de contato integrado</li>
+              <li>SEO básico e publicação</li>
             </ul>
-            <p class="card-tag">Ideal para produtores, pequenas indústrias, granjas e salas técnicas.</p>
+            <p class="card-tag">Ideal para pequenas empresas, freelancers e lançamentos.</p>
           </article>
-
           <article class="card">
-            <h3>Implementação de Sensores & Automação</h3>
-            <p class="card-price">R$ 300 a R$ 1.500 / instalação</p>
+            <h3>Dashboards IoT e Dados em Tempo Real</h3>
+            <p class="card-price">R$ 500 a R$ 2.500</p>
             <ul class="card-list">
-              <li>Instalação de sensores (temp/umid/nível, ultrassônico, etc.)</li>
+              <li>Gráficos e indicadores com Chart.js</li>
+              <li>Dados via MQTT, APIs ou bancos de dados</li>
+              <li>Alertas por WhatsApp/Telegram ou e-mail</li>
+              <li>Modo claro/escuro e layout mobile</li>
+            </ul>
+            <p class="card-tag">Visualização clara para operação e tomada de decisão.</p>
+          </article>
+          <article class="card">
+            <h3>Integrações com Hardware (ESP32/IoT)</h3>
+            <p class="card-price">R$ 400 a R$ 2.000</p>
+            <ul class="card-list">
               <li>Configuração de ESP32/ESP8266</li>
-              <li>Controle de bombas, motores e luminárias</li>
-              <li>Testes e sistema funcionando</li>
+              <li>Leitura de sensores e publicação MQTT</li>
+              <li>Controle de bombas, motores e relés</li>
+              <li>Documentação para manutenção</li>
             </ul>
-            <p class="card-tag">Automação prática para agro e indústria.</p>
+            <p class="card-tag">Conecto o físico ao digital com simplicidade.</p>
           </article>
-
           <article class="card">
-            <h3>Projetos IoT Avançados (Agro & Industrial)</h3>
-            <p class="card-price">R$ 1.500 a R$ 10.000</p>
+            <h3>Automação de Processos e Notificações</h3>
+            <p class="card-price">R$ 300 a R$ 1.500</p>
             <ul class="card-list">
-              <li>LoRa, ESP32-CAM, sensores especiais</li>
-              <li>Telemetria de campo e análise de dados</li>
-              <li>Arquitetura + dashboard completo</li>
-              <li>Relatórios automáticos e customizados</li>
+              <li>Bots para WhatsApp/Telegram</li>
+              <li>Gatilhos para e-mail, planilhas e dashboards</li>
+              <li>Rotinas de atualização de dados</li>
+              <li>Logs e monitoramento básico</li>
             </ul>
-            <p class="card-tag">Para quem precisa de algo realmente diferente.</p>
+            <p class="card-tag">Menos tarefas manuais e mais tempo para o negócio.</p>
           </article>
-
-          <!-- Web & Sistemas -->
           <article class="card">
-            <h3>Desenvolvimento de Sites Profissionais</h3>
-            <p class="card-price">R$ 800 a R$ 3.000</p>
+            <h3>Protótipos e POCs para Agro/Indústria</h3>
+            <p class="card-price">R$ 1.000 a R$ 6.000</p>
             <ul class="card-list">
-              <li>Site moderno e responsivo</li>
-              <li>Páginas de serviços/produtos</li>
-              <li>Formulário de contato</li>
-              <li>Publicação e configuração básica</li>
+              <li>Arquitetura enxuta + piloto funcional</li>
+              <li>Sensoriamento, telemetria e relatórios</li>
+              <li>Painel web com indicadores-chave</li>
+              <li>Entrega rápida para validar com o time</li>
             </ul>
-            <p class="card-tag">Perfeito para pequenas empresas e profissionais.</p>
+            <p class="card-tag">Coloco à prova ideias com foco em resultado.</p>
           </article>
-
           <article class="card">
-            <h3>Sistemas Web Simples Personalizados</h3>
-            <p class="card-price">R$ 500 a R$ 3.000</p>
-            <ul class="card-list">
-              <li>Controle de estoque, pedidos, agendamentos</li>
-              <li>Painéis administrativos e relatórios</li>
-              <li>Interfaces simples e objetivas</li>
-              <li>Desenvolvimento sob medida</li>
-            </ul>
-            <p class="card-tag">Sistema certo, do jeito que o cliente precisa.</p>
-          </article>
-
-          <article class="card">
-            <h3>Landing Pages de Alta Conversão</h3>
-            <p class="card-price">R$ 300 a R$ 1.000</p>
-            <ul class="card-list">
-              <li>Página única, direta e persuasiva</li>
-              <li>Chamada para ação focada</li>
-              <li>Integração com WhatsApp ou e-mail</li>
-              <li>Entrega rápida (1 a 3 dias)</li>
-            </ul>
-            <p class="card-tag">Ideal para campanhas e anúncios.</p>
-          </article>
-
-          <!-- Consultoria & Pacotes -->
-          <article class="card">
-            <h3>Consultoria em IoT & Automação</h3>
+            <h3>Consultoria Técnica (IoT + Web)</h3>
             <p class="card-price">R$ 100 a R$ 300 / hora</p>
             <ul class="card-list">
-              <li>Análise de projeto e arquitetura</li>
-              <li>Indicação de sensores e hardware</li>
-              <li>Configuração de MQTT, APIs, bancos de dados</li>
-              <li>Suporte em dimensionamento técnico</li>
+              <li>Avaliação de viabilidade e custos</li>
+              <li>Escolha de sensores, gateways e APIs</li>
+              <li>Sugestão de arquitetura e banco de dados</li>
+              <li>Roadmap simples de implementação</li>
             </ul>
-            <p class="card-tag">Para empresas e profissionais que querem dar o próximo passo.</p>
+            <p class="card-tag">Para clareza técnica antes de investir.</p>
           </article>
-
           <article class="card">
-            <h3>Mentoria Técnica (IoT + Programação)</h3>
+            <h3>Mentoria Prática para Projetos</h3>
             <p class="card-price">R$ 200 / sessão (1h30)</p>
             <ul class="card-list">
-              <li>ESP32, MQTT, automação agrícola</li>
-              <li>Criação de dashboards com dados reais</li>
-              <li>Fundamentos de desenvolvimento web</li>
-              <li>Apoio para projetos pessoais</li>
+              <li>Orientação em projetos IoT ou web</li>
+              <li>Code review e boas práticas</li>
+              <li>Ajuda em deploy e publicação</li>
+              <li>Materiais e próximos passos</li>
             </ul>
-            <p class="card-tag">Para quem quer aprender fazendo.</p>
+            <p class="card-tag">Vamos construir junto e tirar dúvidas ao vivo.</p>
           </article>
-
           <article class="card">
-            <h3>Pacote Produtor Inteligente</h3>
-            <p class="card-price">R$ 1.500 (projeto exemplo)</p>
+            <h3>Pacote MVP Rápido (Sistema + Dashboard)</h3>
+            <p class="card-price">R$ 1.500 (exemplo)</p>
             <ul class="card-list">
-              <li>Instalação de sensor + ESP32</li>
-              <li>Dashboard básico com indicadores</li>
-              <li>Alertas configurados</li>
-              <li>Acesso web ao sistema</li>
+              <li>Formulários e CRUD básicos</li>
+              <li>Dashboard inicial com métricas</li>
+              <li>Integração com API ou planilha</li>
+              <li>Entrega configurada no ar</li>
             </ul>
-            <p class="card-tag">Primeiro passo para o campo conectado.</p>
+            <p class="card-tag">Um produto mínimo viável para validar rápido.</p>
           </article>
         </div>
       </div>
     </section>
-
     <!-- Portfólio -->
     <section class="section section-alt" id="portfolio">
       <div class="container">
         <h2 class="section-title">Portfólio</h2>
         <p class="section-subtitle">
-          Alguns dos principais projetos que representam meu trabalho com IoT, automação e desenvolvimento web.
+          Projetos que combinam desenvolvimento fullstack, IoT e automação com foco em experiências reais.
         </p>
-
         <div class="portfolio-grid">
-          <article class="portfolio-item">
-            <div class="portfolio-image">
-              <!-- aqui você pode colocar um print real do dashboard -->
-              <img src="img/projeto-dashboard-iot.jpg" alt="Dashboard IoT em tempo real" />
+          <article class="portfolio-item"><div class="portfolio-info">
+              <h3>
+                <a href="https://cunicultura.onrender.com/" target="_blank" rel="noopener">Dashboard IoT para Cunicultura (MQTT)</a>
+              </h3>
+              <p>
+                Sistema que monitora ambiente de criação de coelhos em tempo real:
+                leitura de sensores via MQTT, tratamento de dados e visualização web responsiva.
+              </p>
+              <p class="portfolio-tech">
+                Tecnologias: MQTT, Node.js, WebSockets, Chart.js, HTML, CSS, JavaScript
+              </p>
+              <div class="portfolio-actions">
+                <a class="btn secondary" href="https://cunicultura.onrender.com/" target="_blank" rel="noopener">Abrir demo</a>
+              </div>
             </div>
-            <div class="portfolio-info">
+          </article>
+          <article class="portfolio-item"><div class="portfolio-info">
+              <h3>
+                <a href="https://calculos-mecanizacao.onrender.com" target="_blank" rel="noopener">Calculadora de Mecanização Agrícola</a>
+              </h3>
+              <p>
+                Ferramenta web para estimar capacidade de campo, consumo de combustível e parâmetros de mecanização,
+                agilizando decisões em aula e em campo.
+              </p>
+              <p class="portfolio-tech">
+                Tecnologias: HTML, CSS, JavaScript
+              </p>
+            <div class="portfolio-actions">
+              <a class="btn secondary" href="https://calculos-mecanizacao.onrender.com" target="_blank" rel="noopener">Abrir demo</a>
+            </div>
+          </div>
+          </article>
+          <article class="portfolio-item"><div class="portfolio-info">
+              <h3>
+                <a href="https://acompanhamento-obras.onrender.com" target="_blank" rel="noopener">Sistema de Acompanhamento de Obras</a>
+              </h3>
+              <p>
+                Plataforma web para engenheiros civis acompanharem avanço das obras com registro fotográfico,
+                status e anotações organizadas por etapa.
+              </p>
+              <p class="portfolio-tech">
+                Tecnologias: HTML, CSS, JavaScript
+              </p>
+            <div class="portfolio-actions">
+              <a class="btn secondary" href="https://acompanhamento-obras.onrender.com" target="_blank" rel="noopener">Abrir demo</a>
+            </div>
+          </div>
+          </article>
+          <article class="portfolio-item"><div class="portfolio-info">
+              <h3>
+                <a href="https://sis-gest-ped-int-gi.onrender.com" target="_blank" rel="noopener">Sistema de Gestão de Produção Interna</a>
+              </h3>
+              <p>
+                Solução web para controlar fluxo de produção, pedidos, estoque e comunicação interna,
+                garantindo visibilidade e agilidade para o time.
+              </p>
+              <p class="portfolio-tech">
+                Tecnologias: HTML, CSS, JavaScript
+              </p>
+              <div class="portfolio-actions">
+                <a class="btn secondary" href="https://sis-gest-ped-int-gi.onrender.com" target="_blank" rel="noopener">Abrir demo</a>
+              </div>
+            </div>
+          </article>
+          <div class="portfolio-info">
               <h3>Dashboard IoT Completo (MQTT + APIs)</h3>
               <p>
-                Dashboard em tempo real com integração via MQTT e APIs JSON, gráficos com Chart.js,
-                tema escuro, responsivo e pronto para uso em campo ou indústria.
+                Dashboard em tempo real integrado a MQTT e APIs JSON, gráficos com Chart.js,
+                tema escuro, responsivo e pronto para operação em campo ou indústria.
               </p>
               <p class="portfolio-tech">
                 Tecnologias: HTML, CSS, JavaScript, Chart.js, MQTT, JSON, APIs
               </p>
             </div>
           </article>
-
-          <article class="portfolio-item">
-            <div class="portfolio-image">
-              <img src="img/projeto-automacao-residencial.jpg" alt="Painel de automação residencial" />
-            </div>
-            <div class="portfolio-info">
+          <div class="portfolio-info">
               <h3>Sistema Web para Automação Residencial (ESP32)</h3>
               <p>
                 Controle de lâmpadas e dispositivos via painel web, com login, dashboard estilizado,
                 ícones, modo escuro e integração com ESP32 usando WebSocket.
               </p>
               <p class="portfolio-tech">
-                Tecnologias: ESP32, HTML, CSS, JS, WebSocket, Firebase
+                Tecnologias: ESP32, HTML, CSS, JavaScript, WebSocket, Firebase
               </p>
             </div>
           </article>
-
-          <article class="portfolio-item">
-            <div class="portfolio-image">
-              <img src="img/projeto-armadilha-pragas.jpg" alt="Protótipo de armadilha inteligente para pragas" />
-            </div>
-            <div class="portfolio-info">
+          <div class="portfolio-info">
               <h3>Armadilha Inteligente para Pragas (ESP32-CAM + IA)</h3>
               <p>
                 Armadilha agrícola com ESP32-CAM, sensor de presença, transmissão LoRa e reconhecimento
@@ -264,28 +471,7 @@
               </p>
             </div>
           </article>
-
-          <article class="portfolio-item">
-            <div class="portfolio-image">
-              <img src="img/projeto-nextfarm.jpg" alt="Tela da plataforma NextFarm" />
-            </div>
-            <div class="portfolio-info">
-              <h3>Mini Plataforma IoT (NextFarm MVP)</h3>
-              <p>
-                Plataforma web com login, dashboard, mapa georreferenciado, visão cliente e administrador,
-                persistência de dados e layout moderno focado em AgTech.
-              </p>
-              <p class="portfolio-tech">
-                Tecnologias: HTML, CSS, JS, Bootstrap, APIs, banco de dados
-              </p>
-            </div>
-          </article>
-
-          <article class="portfolio-item">
-            <div class="portfolio-image">
-              <img src="img/projeto-sites.jpg" alt="Exemplo de site profissional" />
-            </div>
-            <div class="portfolio-info">
+          <div class="portfolio-info">
               <h3>Sites Profissionais para Pequenas Empresas</h3>
               <p>
                 Criação de sites institucionais modernos e responsivos, com páginas de serviços, produtos,
@@ -296,12 +482,7 @@
               </p>
             </div>
           </article>
-
-          <article class="portfolio-item">
-            <div class="portfolio-image">
-              <img src="img/projeto-sistemas-internos.jpg" alt="Sistema interno com dashboard" />
-            </div>
-            <div class="portfolio-info">
+          <div class="portfolio-info">
               <h3>Ferramentas e Sistemas Internos</h3>
               <p>
                 Desenvolvimento de pequenos sistemas para controle de estoque, pedidos, relatórios
@@ -315,70 +496,72 @@
         </div>
       </div>
     </section>
-
     <!-- Sobre -->
     <section class="section" id="about">
       <div class="container about-grid">
         <div>
           <h2 class="section-title">Sobre Jean Carlos</h2>
           <p>
-            Sou Engenheiro Mecânico, especialista em IoT pelo SENAI e atualmente curso
-            Agrocomputação na FAZU. Atuo na interseção entre mecânica, automação, software
-            e agronegócio, desenvolvendo soluções que conectam sensores, equipamentos e
-            pessoas através de dashboards e sistemas web.
+            Engenheiro Mecânico com especialização técnica em IoT (SENAI), formação em Engenharia de Software (Alura)
+            e Agrocomputação (FAZU). Desenvolvedor fullstack júnior que une hardware, software e dados para criar
+            dashboards, WebApps e automações com foco em operação e resultado.
           </p>
           <p>
-            Tenho experiência prática com ESP32, MQTT, APIs, desenvolvimento web
-            e integração de sistemas para o agro e para a indústria, sempre buscando
-            soluções simples, robustas e com foco no resultado para o cliente.
+            Experiência prática com Java/Spring Boot, Node.js, Angular/JS, PHP, MQTT/ESP32, bancos SQL/NoSQL (MySQL, MongoDB)
+            e integrações REST/AWS/Firebase. Busco soluções simples, bem documentadas e prontas para o campo, a indústria
+            ou produtos digitais.
           </p>
         </div>
         <div class="about-box">
-          <h3>Principais competências</h3>
+          <h3>Competências técnicas</h3>
           <ul>
-            <li>IoT (ESP32, ESP8266, MQTT, GPRS, LoRa)</li>
-            <li>Dashboards e visualização de dados em tempo real</li>
-            <li>Desenvolvimento web (HTML, CSS, JS, Bootstrap)</li>
-            <li>Automação agrícola e industrial</li>
-            <li>Integração entre hardware e software</li>
+            <li>Back-end: Java (Spring Boot), Node.js, PHP</li>
+            <li>Front-end: Angular/JavaScript, Bootstrap, Chart.js</li>
+            <li>APIs e dados: REST, MySQL, MongoDB, Firebase, AWS</li>
+            <li>IoT e automação: ESP32/ESP8266, MQTT, GPRS/LoRa, Modbus</li>
+            <li>CAD/Modelagem: AutoCAD, Inventor, SolidWorks</li>
+          </ul>
+        </div>
+        <div class="about-box">
+          <h3>Formação acadêmica</h3>
+          <ul>
+            <li>FAZU — Tecnólogo em Agrocomputação (2024–2026)</li>
+            <li>SENAI — Especialização Técnica em IoT (2023–2024)</li>
+            <li>Alura — Engenharia de Software (2025–atual)</li>
+            <li>UniFACTHUS — Engenharia Mecânica, Ênfase em Controle e Automação (2014–2022)</li>
           </ul>
         </div>
       </div>
     </section>
-
     <!-- Contato -->
     <section class="section section-alt" id="contact">
       <div class="container contact-grid">
         <div>
           <h2 class="section-title">Contato</h2>
           <p class="section-subtitle">
-            Quer levar IoT, automação ou um sistema web para o seu negócio?
-            Me chama e a gente conversa com calma sobre a melhor solução pra sua realidade.
+            Precisa de um sistema web, integração IoT ou um MVP fullstack para validar ideias?
+            Vamos conversar e encontrar a melhor solução para sua operação.
           </p>
-
           <ul class="contact-list">
             <li><strong>Nome:</strong> Jean Carlos</li>
             <li><strong>Cidade:</strong> Uberaba/MG</li>
-            <li><strong>LinkedIn:</strong> 
+            <li><strong>LinkedIn:</strong>
               <a href="https://www.linkedin.com/in/jean-carlos-58687bab/" target="_blank">
                 Meu perfil no LinkedIn
               </a>
             </li>
-            <!-- Troca aqui pelo seu número real -->
-            <li><strong>WhatsApp:</strong> 
+            <li><strong>WhatsApp:</strong>
               <a href="https://wa.me/5534996981710" target="_blank">
                 Falar comigo no WhatsApp
               </a>
             </li>
-            <!-- E-mail se quiser -->
-            <li><strong>E-mail:</strong> 
+            <li><strong>E-mail:</strong>
               <a href="mailto:jean100889@gmail.com">
                 jean100889@gmail.com
               </a>
             </li>
           </ul>
         </div>
-
         <form class="contact-form" id="contactForm">
           <h3>Envie uma mensagem</h3>
           <label>
@@ -403,14 +586,20 @@
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="container footer-content">
-      <p>© <span id="year"></span> Jean Carlos – IoT, Automação & Desenvolvimento Web.</p>
+      <p>© <span id="year"></span> Desenvolvido por Jean Carlos — Engenhario Mecânico, Eng. de Software, Fullstack, IoT, Automação, Agrocomputação.</p>
       <p>Construído com HTML, CSS e JavaScript puros.</p>
     </div>
   </footer>
-
+  <div class="float-actions" aria-label="Ações rápidas">
+    <a class="float-btn whatsapp" href="https://wa.me/5534996981710" target="_blank" aria-label="Falar comigo no WhatsApp">
+      <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16.04 4c-6.65 0-12.05 5.35-12.05 11.95 0 2.11.55 4.17 1.6 5.99L4 28l6.28-1.65a12.1 12.1 0 0 0 5.76 1.45h.01c6.65 0 12.05-5.35 12.05-11.95C28.1 9.35 22.7 4 16.04 4Zm-.02 21.52c-1.8 0-3.56-.48-5.1-1.4l-.36-.21-3.74.98 1-3.64-.24-.37a9.95 9.95 0 0 1-1.52-5.32c0-5.5 4.49-9.97 10-9.97 2.67 0 5.18 1.03 7.07 2.9a9.86 9.86 0 0 1 2.93 7.06c0 5.5-4.49 9.97-10 9.97Zm5.62-7.46c-.31-.15-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.15-.21.31-.82 1.01-1 1.22-.18.2-.37.23-.68.08-.31-.15-1.32-.48-2.5-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.56.16-.18.21-.31.31-.52.1-.2.05-.38-.03-.53-.08-.15-.71-1.7-.97-2.33-.26-.63-.52-.54-.71-.55l-.61-.01c-.2 0-.52.08-.8.38-.27.31-1.05 1.03-1.05 2.52s1.08 2.92 1.23 3.12c.15.21 2.11 3.23 5.1 4.52.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.61-.36Z" />
+      </svg>
+    </a>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
+
