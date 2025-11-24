@@ -1,4 +1,4 @@
-﻿// Menu mobile
+// Menu mobile
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -7,7 +7,6 @@ if (menuToggle && navMenu) {
     navMenu.classList.toggle("open");
   });
 
-  // Fecha o menu ao clicar em um link (mobile)
   navMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("open");
@@ -15,21 +14,26 @@ if (menuToggle && navMenu) {
   });
 }
 
-// Ano automático no footer
+// Loop continuo na faixa de tecnologias
+const tickerTrack = document.querySelector(".ticker-track");
+if (tickerTrack) {
+  tickerTrack.insertAdjacentHTML("beforeend", tickerTrack.innerHTML);
+}
+
+// Cards de serviços sempre abertos
+const serviceCards = document.querySelectorAll(".service-card");
+serviceCards.forEach((card) => {
+  const header = card.querySelector(".card-header");
+  const body = card.querySelector(".card-body");
+  if (!header || !body) return;
+
+  card.classList.add("open");
+  header.setAttribute("aria-expanded", "true");
+  body.style.maxHeight = "none";
+});
+
+// Ano automatico no footer
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
-}
-
-// Formulário de contato (simulação)
-const contactForm = document.getElementById("contactForm");
-const formFeedback = document.getElementById("formFeedback");
-
-if (contactForm && formFeedback) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    formFeedback.textContent =
-      "Obrigado pela mensagem! Em uma implementação real, aqui eu enviaria esses dados para seu e-mail ou backend.";
-  });
 }
