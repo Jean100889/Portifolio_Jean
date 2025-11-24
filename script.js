@@ -20,6 +20,24 @@ if (tickerTrack) {
   tickerTrack.insertAdjacentHTML("beforeend", tickerTrack.innerHTML);
 }
 
+// Animações ao rolar (reveal)
+const revealEls = document.querySelectorAll(".reveal");
+if (revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+}
+
 // Cards de serviços sempre abertos
 const serviceCards = document.querySelectorAll(".service-card");
 serviceCards.forEach((card) => {
