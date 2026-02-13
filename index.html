@@ -30,32 +30,72 @@
 </head>
 
 <body>
+  <!-- Overlay do sidebar mobile -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
   <header class="header">
     <div class="container header-content">
-      <div class="logo">
+      <a href="#hero" class="logo" aria-label="Ir para o início">
         <img src="img/Jc Bonato.png" alt="Foto de Jean Carlos" class="logo-photo" />
         <div class="logo-text">
-          <h1>JC Bonato</h1>
-          <p>Catálogo de Serviços | Portifólio</p>
+          <span class="logo-name">JC Bonato</span>
+          <span class="logo-sub">Dev Fullstack · IoT</span>
         </div>
-        <a class="logo-linkedin" href="https://www.linkedin.com/in/jean-carlos-58687bab/" target="_blank"
+      </a>
+
+      <nav class="nav" id="navMenu" aria-label="Navegação principal">
+        <div class="nav-header-mobile">
+          <span class="nav-title">Menu</span>
+          <button class="nav-close" id="navClose" aria-label="Fechar menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M18 6 6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <a class="nav-link" href="#hero" data-section="hero">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 3 10h2v9h5v-5h4v5h5v-9h2z"/></svg>
+          Início
+        </a>
+        <a class="nav-link" href="#services" data-section="services">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
+          Serviços
+        </a>
+        <a class="nav-link" href="#portfolio" data-section="portfolio">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 7h16v11H4V7zm3-3h10v2H7V4z"/></svg>
+          Portfólio
+        </a>
+        <a class="nav-link" href="#about" data-section="about">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4 0-7 2-7 4v1h14v-1c0-2-3-4-7-4z"/></svg>
+          Sobre
+        </a>
+        <a class="nav-link" href="#contact" data-section="contact">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 13l8-5V6H4zm0 12h16V9.5l-7.55 4.72a1 1 0 0 1-1.1 0L4 9.5V18z"/></svg>
+          Contato
+        </a>
+
+        <div class="nav-footer-mobile">
+          <a href="https://wa.me/5534996981710" target="_blank" rel="noopener" class="nav-cta-mobile">
+            💬 Falar no WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/jean-carlos-58687bab/" target="_blank" rel="noopener" class="nav-linkedin-mobile">
+            <img src="img/linkedin-icon.png" alt="LinkedIn" />
+            LinkedIn
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-linkedin" href="https://www.linkedin.com/in/jean-carlos-58687bab/" target="_blank"
           aria-label="LinkedIn de Jean Carlos">
           <img src="img/linkedin-icon.png" alt="LinkedIn" />
         </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
-
-      <!-- Hamburguer: só em telas maiores (desktop/tablet) -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
-        ☰
-      </button>
-
-      <nav class="nav" id="navMenu">
-        <a href="#hero">Início</a>
-        <a href="#services">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
-      </nav>
     </div>
   </header>
 
@@ -222,7 +262,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Aplicações Web Fullstack</h3>
+                <h3><span>🖥️</span> Aplicações Web Fullstack</h3>
                 <p class="card-price">R$ 800 a R$ 3.500</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -244,7 +284,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Sites e Landing Pages Profissionais</h3>
+                <h3><span>🌐</span> Sites e Landing Pages Profissionais</h3>
                 <p class="card-price">R$ 500 a R$ 2.000</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -266,7 +306,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Dashboards IoT e Dados em Tempo Real</h3>
+                <h3><span>📊</span> Dashboards IoT e Dados em Tempo Real</h3>
                 <p class="card-price">R$ 500 a R$ 2.500</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -288,7 +328,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Integrações com Hardware (ESP32/IoT)</h3>
+                <h3><span>🔌</span> Integrações com Hardware (ESP32/IoT)</h3>
                 <p class="card-price">R$ 400 a R$ 2.000</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -310,7 +350,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Automação de Processos e Notificações</h3>
+                <h3><span>⚙️</span> Automação de Processos e Notificações</h3>
                 <p class="card-price">R$ 300 a R$ 1.500</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -332,7 +372,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Protótipos e POCs para Agro/Indústria</h3>
+                <h3><span>🌱</span> Protótipos e POCs para Agro/Indústria</h3>
                 <p class="card-price">R$ 1.000 a R$ 6.000</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -354,7 +394,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Consultoria Técnica (IoT + Web)</h3>
+                <h3><span>💡</span> Consultoria Técnica (IoT + Web)</h3>
                 <p class="card-price">R$ 100 a R$ 300 / hora</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -376,7 +416,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Mentoria Prática para Projetos</h3>
+                <h3><span>🎯</span> Mentoria Prática para Projetos</h3>
                 <p class="card-price">R$ 200 / sessão (1h30)</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -398,7 +438,7 @@
           <article class="card service-card">
             <button class="card-header" type="button" aria-expanded="false">
               <div class="card-heading">
-                <h3>Pacote MVP Rápido (Sistema + Dashboard)</h3>
+                <h3><span>🚀</span> Pacote MVP Rápido (Sistema + Dashboard)</h3>
                 <p class="card-price">R$ 1.500 (exemplo)</p>
               </div>
               <span class="card-toggle" aria-hidden="true">▼</span>
@@ -429,105 +469,163 @@
         </p>
 
         <div class="portfolio-grid">
-          <article class="portfolio-item">
+
+          <!-- Projeto 1 -->
+          <article class="portfolio-item premium-item"
+            data-project="Dashboard IoT para Cunicultura (MQTT)"
+            data-price="R$ 29,90"
+            data-demo="https://cunicultura.onrender.com/"
+            data-desc="Acesso completo à demo do sistema de monitoramento em tempo real via MQTT.">
             <div class="portfolio-info">
-              <h3>
-                <a href="https://cunicultura.onrender.com/" target="_blank" rel="noopener">
-                  Dashboard IoT para Cunicultura (MQTT)
-                </a>
-              </h3>
+              <div class="premium-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1 9.5 8H2l6 4.5-2.3 7L12 15l6.3 4.5-2.3-7L22 8h-7.5z"/></svg>
+                Acesso Premium
+              </div>
+              <h3>Dashboard IoT para Cunicultura (MQTT)</h3>
               <p>
                 Sistema que monitora ambiente de criação de coelhos em tempo real:
                 leitura de sensores via MQTT, tratamento de dados e visualização web responsiva.
               </p>
-              <p class="portfolio-tech">
-                Tecnologias: MQTT, Node.js, WebSockets, Chart.js, HTML, CSS, JavaScript
-              </p>
-              <div class="portfolio-actions">
-                <a class="btn secondary" href="https://cunicultura.onrender.com/" target="_blank" rel="noopener">
-                  Abrir demo
-                </a>
+              <p class="portfolio-tech">MQTT · Node.js · WebSockets · Chart.js · HTML/CSS/JS</p>
+              <div class="premium-footer">
+                <div class="premium-price-tag">
+                  <span class="price-label">Acesso à demo</span>
+                  <span class="price-value">R$ 29,90</span>
+                </div>
+                <button class="btn unlock-btn" type="button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                  Desbloquear acesso
+                </button>
               </div>
             </div>
-            <a class="portfolio-thumb" href="https://cunicultura.onrender.com/" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-locked">
               <img src="img/port-1.jpg" alt="Preview do dashboard IoT para Cunicultura" />
-            </a>
+              <div class="thumb-blur-overlay">
+                <div class="thumb-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                </div>
+                <span>Acesso bloqueado</span>
+              </div>
+            </div>
           </article>
 
-          <article class="portfolio-item">
+          <!-- Projeto 2 -->
+          <article class="portfolio-item premium-item"
+            data-project="Calculadora de Mecanização Agrícola"
+            data-price="R$ 19,90"
+            data-demo="https://calculos-mecanizacao.onrender.com"
+            data-desc="Acesso completo à ferramenta de cálculos para mecanização agrícola.">
             <div class="portfolio-info">
-              <h3>
-                <a href="https://calculos-mecanizacao.onrender.com" target="_blank" rel="noopener">
-                  Calculadora de Mecanização Agrícola
-                </a>
-              </h3>
+              <div class="premium-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1 9.5 8H2l6 4.5-2.3 7L12 15l6.3 4.5-2.3-7L22 8h-7.5z"/></svg>
+                Acesso Premium
+              </div>
+              <h3>Calculadora de Mecanização Agrícola</h3>
               <p>
                 Ferramenta web para estimar capacidade de campo, consumo de combustível e parâmetros de mecanização,
                 agilizando decisões em aula e em campo.
               </p>
-              <p class="portfolio-tech">
-                Tecnologias: HTML, CSS, JavaScript
-              </p>
-              <div class="portfolio-actions">
-                <a class="btn secondary" href="https://calculos-mecanizacao.onrender.com" target="_blank" rel="noopener">
-                  Abrir demo
-                </a>
+              <p class="portfolio-tech">HTML · CSS · JavaScript</p>
+              <div class="premium-footer">
+                <div class="premium-price-tag">
+                  <span class="price-label">Acesso à demo</span>
+                  <span class="price-value">R$ 19,90</span>
+                </div>
+                <button class="btn unlock-btn" type="button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                  Desbloquear acesso
+                </button>
               </div>
             </div>
-            <a class="portfolio-thumb" href="https://calculos-mecanizacao.onrender.com" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-locked">
               <img src="img/port-2.jpg" alt="Preview da Calculadora de Mecanização Agrícola" />
-            </a>
+              <div class="thumb-blur-overlay">
+                <div class="thumb-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                </div>
+                <span>Acesso bloqueado</span>
+              </div>
+            </div>
           </article>
 
-          <article class="portfolio-item">
+          <!-- Projeto 3 -->
+          <article class="portfolio-item premium-item"
+            data-project="Sistema de Acompanhamento de Obras"
+            data-price="R$ 24,90"
+            data-demo="https://acompanhamento-obras.onrender.com"
+            data-desc="Acesso completo à plataforma de acompanhamento de obras com registro fotográfico.">
             <div class="portfolio-info">
-              <h3>
-                <a href="https://acompanhamento-obras.onrender.com" target="_blank" rel="noopener">
-                  Sistema de Acompanhamento de Obras
-                </a>
-              </h3>
+              <div class="premium-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1 9.5 8H2l6 4.5-2.3 7L12 15l6.3 4.5-2.3-7L22 8h-7.5z"/></svg>
+                Acesso Premium
+              </div>
+              <h3>Sistema de Acompanhamento de Obras</h3>
               <p>
                 Plataforma web para engenheiros civis acompanharem o avanço das obras com registro fotográfico,
                 status e anotações organizadas por etapa.
               </p>
-              <p class="portfolio-tech">
-                Tecnologias: HTML, CSS, JavaScript
-              </p>
-              <div class="portfolio-actions">
-                <a class="btn secondary" href="https://acompanhamento-obras.onrender.com" target="_blank" rel="noopener">
-                  Abrir demo
-                </a>
+              <p class="portfolio-tech">HTML · CSS · JavaScript</p>
+              <div class="premium-footer">
+                <div class="premium-price-tag">
+                  <span class="price-label">Acesso à demo</span>
+                  <span class="price-value">R$ 24,90</span>
+                </div>
+                <button class="btn unlock-btn" type="button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                  Desbloquear acesso
+                </button>
               </div>
             </div>
-            <a class="portfolio-thumb" href="https://acompanhamento-obras.onrender.com" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-locked">
               <img src="img/port-3.jpg" alt="Preview do Sistema de Acompanhamento de Obras" />
-            </a>
+              <div class="thumb-blur-overlay">
+                <div class="thumb-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                </div>
+                <span>Acesso bloqueado</span>
+              </div>
+            </div>
           </article>
 
-          <article class="portfolio-item">
+          <!-- Projeto 4 -->
+          <article class="portfolio-item premium-item"
+            data-project="Sistema de Gestão de Produção Interna"
+            data-price="R$ 34,90"
+            data-demo="https://sis-gest-ped-int-gi.onrender.com"
+            data-desc="Acesso completo ao sistema de controle de produção, pedidos e estoque.">
             <div class="portfolio-info">
-              <h3>
-                <a href="https://sis-gest-ped-int-gi.onrender.com" target="_blank" rel="noopener">
-                  Sistema de Gestão de Produção Interna
-                </a>
-              </h3>
+              <div class="premium-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1 9.5 8H2l6 4.5-2.3 7L12 15l6.3 4.5-2.3-7L22 8h-7.5z"/></svg>
+                Acesso Premium
+              </div>
+              <h3>Sistema de Gestão de Produção Interna</h3>
               <p>
                 Solução web para controlar fluxo de produção, pedidos, estoque e comunicação interna,
                 garantindo visibilidade e agilidade para o time.
               </p>
-              <p class="portfolio-tech">
-                Tecnologias: HTML, CSS, JavaScript
-              </p>
-              <div class="portfolio-actions">
-                <a class="btn secondary" href="https://sis-gest-ped-int-gi.onrender.com" target="_blank" rel="noopener">
-                  Abrir demo
-                </a>
+              <p class="portfolio-tech">HTML · CSS · JavaScript</p>
+              <div class="premium-footer">
+                <div class="premium-price-tag">
+                  <span class="price-label">Acesso à demo</span>
+                  <span class="price-value">R$ 34,90</span>
+                </div>
+                <button class="btn unlock-btn" type="button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                  Desbloquear acesso
+                </button>
               </div>
             </div>
-            <a class="portfolio-thumb" href="https://sis-gest-ped-int-gi.onrender.com" target="_blank" rel="noopener">
+            <div class="portfolio-thumb-locked">
               <img src="img/port-4.jpg" alt="Preview do Sistema de Gestão de Produção Interna" />
-            </a>
+              <div class="thumb-blur-overlay">
+                <div class="thumb-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+                </div>
+                <span>Acesso bloqueado</span>
+              </div>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -577,20 +675,19 @@
       <div class="container contact-grid">
         <div class="contact-card">
           <div class="contact-text">
-            <h2 class="section-title">Contato</h2>
+            <h2 class="section-title">Vamos conversar?</h2>
             <p class="section-subtitle">
               Precisa de um sistema web, integração IoT ou um MVP fullstack para validar ideias?
-              Vamos conversar e encontrar a melhor solução para sua operação.
+              Me conta o projeto e encontramos juntos a melhor solução.
             </p>
             <a class="btn primary contact-cta" href="https://wa.me/5534996981710" target="_blank" rel="noopener">
-              Falar no WhatsApp
+              💬 Falar no WhatsApp
             </a>
           </div>
 
           <div class="contact-details">
             <ul class="contact-list">
-              <li><strong>Nome:</strong> Jean Carlos</li>
-              <li><strong>Cidade:</strong> Uberaba/MG</li>
+              <li><strong style="color:#e2e8f0">Jean Carlos</strong> · Uberaba/MG</li>
 
               <!-- LinkedIn -->
               <li>
@@ -619,7 +716,7 @@
               <li>
                 <span class="contact-icon">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
+                    <path fill="currentColor"
                       d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.01L12 13l8-5V8H4zm0 8h16V9.5l-7.55 4.72a1 1 0 0 1-1.1 0L4 9.5V16z" />
                   </svg>
                 </span>
@@ -694,6 +791,94 @@
       </svg>
     </a>
   </nav>
+
+  <!-- Modal de Desbloqueio -->
+  <div class="unlock-modal" id="unlockModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="unlock-modal-content">
+
+      <button class="modal-close-btn" id="modalClose" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-lock-anim" id="modalLockAnim">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8h-1V6A4 4 0 0 0 8 6v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-5 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm3-9H9V6a3 3 0 0 1 6 0v2z"/></svg>
+        </div>
+        <h3 id="modalTitle">Desbloquear acesso</h3>
+        <p class="modal-project-name" id="modalProjectName">Nome do Projeto</p>
+        <div class="modal-price-display" id="modalPriceDisplay">R$ 29,90</div>
+      </div>
+
+      <div class="modal-steps">
+
+        <!-- Passo 1: Escolher pagamento -->
+        <div class="modal-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <p class="step-title">Faça o pagamento</p>
+            <div class="payment-tabs">
+              <button class="pay-tab active" id="tabPix" data-tab="pix">💰 PIX</button>
+              <button class="pay-tab" id="tabCard" data-tab="card">💳 Cartão</button>
+            </div>
+
+            <!-- PIX -->
+            <div class="pay-panel" id="panelPix">
+              <p class="pay-info">Transfira o valor via PIX para a chave abaixo:</p>
+              <div class="pix-key-box">
+                <div class="pix-key-row">
+                  <span class="pix-key-label">Chave PIX (telefone)</span>
+                  <div class="pix-key-value">
+                    <code id="pixKeyText">+55 34 99698-1710</code>
+                    <button class="copy-pix-btn" id="copyPixBtn" aria-label="Copiar chave PIX">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                      Copiar
+                    </button>
+                  </div>
+                </div>
+                <div class="pix-info-row">
+                  <span>Titular:</span> <strong>Jean Carlos Bonato</strong>
+                </div>
+                <div class="pix-info-row">
+                  <span>Valor:</span> <strong id="pixAmount">R$ 29,90</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cartão (link externo) -->
+            <div class="pay-panel hidden" id="panelCard">
+              <p class="pay-info">Pague com cartão de crédito ou débito de forma segura:</p>
+              <a class="btn primary card-pay-btn" id="cardPayLink"
+                href="https://wa.me/5534996981710?text=Ol%C3%A1%20Jean%2C%20quero%20pagar%20com%20cart%C3%A3o!"
+                target="_blank" rel="noopener">
+                💳 Solicitar link de pagamento
+              </a>
+              <p class="pay-note">Vou te enviar um link de pagamento seguro pelo WhatsApp em instantes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passo 2: Enviar comprovante -->
+        <div class="modal-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <p class="step-title">Envie o comprovante</p>
+            <p class="step-desc">Após o pagamento, envie o print/comprovante no WhatsApp. Você receberá o link da demo em minutos.</p>
+            <a class="btn whatsapp-confirm-btn" id="modalWhatsappBtn" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.04 4c-6.65 0-12.05 5.35-12.05 11.95 0 2.11.55 4.17 1.6 5.99L4 28l6.28-1.65a12.1 12.1 0 0 0 5.76 1.45h.01c6.65 0 12.05-5.35 12.05-11.95C28.1 9.35 22.7 4 16.04 4Zm-.02 21.52c-1.8 0-3.56-.48-5.1-1.4l-.36-.21-3.74.98 1-3.64-.24-.37a9.95 9.95 0 0 1-1.52-5.32c0-5.5 4.49-9.97 10-9.97 2.67 0 5.18 1.03 7.07 2.9a9.86 9.86 0 0 1 2.93 7.06c0 5.5-4.49 9.97-10 9.97Zm5.62-7.46c-.31-.15-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.15-.21.31-.82 1.01-1 1.22-.18.2-.37.23-.68.08-.31-.15-1.32-.48-2.5-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.56.16-.18.21-.31.31-.52.1-.2.05-.38-.03-.53-.08-.15-.71-1.7-.97-2.33-.26-.63-.52-.54-.71-.55l-.61-.01c-.2 0-.52.08-.8.38-.27.31-1.05 1.03-1.05 2.52s1.08 2.92 1.23 3.12c.15.21 2.11 3.23 5.1 4.52.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.61-.36Z"/></svg>
+              Enviar comprovante no WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="modal-footer-note">🔒 Pagamento manual · Acesso enviado em até 30 min · Garantia de satisfação</p>
+
+    </div>
+  </div>
+  <!-- /Modal de Desbloqueio -->
 
   <script src="script.js"></script>
 </body>
