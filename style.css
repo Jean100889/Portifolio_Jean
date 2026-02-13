@@ -278,16 +278,29 @@ img {
   display: none;
 }
 
+/* Garante que tudo fica acima do canvas fixo */
+header, main, footer, .float-actions, .mobile-bar, .nav-overlay, .unlock-modal {
+  position: relative;
+  z-index: 1;
+}
+
 /* Hero */
 
 .hero {
-  padding: 5.5rem 0 5rem;
+  padding: 3.5rem 0 4rem;
   background:
-    radial-gradient(circle at 15% 25%, rgba(99, 102, 241, 0.18), transparent 38%),
-    radial-gradient(circle at 85% 5%, rgba(34, 197, 94, 0.2), transparent 35%),
-    radial-gradient(circle at 50% 80%, rgba(15, 23, 42, 0.5), transparent 50%),
-    linear-gradient(180deg, rgba(8, 10, 22, 0.95), rgba(2, 6, 23, 0.98));
+    radial-gradient(circle at 15% 25%, rgba(99, 102, 241, 0.12), transparent 38%),
+    radial-gradient(circle at 85% 5%, rgba(34, 197, 94, 0.1), transparent 35%);
   border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .reveal {
@@ -2056,7 +2069,8 @@ img {
   }
 
   .hero {
-    padding-top: 3.2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
   }
 
   .hero-text h2 {

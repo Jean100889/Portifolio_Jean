@@ -160,6 +160,90 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && unlockModal?.classList.contains("open")) closeUnlockModal();
 });
 
+// Animação de partículas futurista no hero
+(function () {
+  const canvas = document.getElementById("heroCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+
+  const PARTICLE_COUNT = 72;
+  const MAX_DIST = 140;
+  const SPEED = 0.45;
+
+  let W, H, particles;
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  function createParticles() {
+    particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+      x: rand(0, W),
+      y: rand(0, H),
+      vx: rand(-SPEED, SPEED),
+      vy: rand(-SPEED, SPEED),
+      r: rand(1.2, 2.4),
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Linhas de conexão
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          const alpha = (1 - dist / MAX_DIST) * 0.28;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(34,197,94,${alpha})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Pontos
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(74,222,128,0.55)";
+      ctx.fill();
+    });
+  }
+
+  function update() {
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+    });
+  }
+
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  createParticles();
+  loop();
+
+  window.addEventListener("resize", () => {
+    resize();
+    createParticles();
+  });
+})();
+
 // Loop continuo na faixa de tecnologias
 const tickerTrack = document.querySelector(".ticker-track");
 if (tickerTrack) {
