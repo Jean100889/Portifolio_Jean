@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BONATTECH</title>
+  <link rel="icon" href="img/bonattech.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: #050c18;
+      font-family: 'Inter', sans-serif;
+    }
+
+    canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    /* Gradientes de profundidade */
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.10), transparent 40%),
+        radial-gradient(circle at 85% 10%, rgba(99, 102, 241, 0.10), transparent 38%),
+        radial-gradient(circle at 50% 90%, rgba(15, 23, 42, 0.55), transparent 50%);
+      pointer-events: none;
+    }
+
+    .center {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.4rem;
+    }
+
+    .logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+      animation: fadeUp 1.2s ease both;
+    }
+
+    .logo-img {
+      width: min(340px, 42vw);
+      height: auto;
+      filter: drop-shadow(0 0 40px rgba(34, 197, 94, 0.35)) drop-shadow(0 0 80px rgba(34, 197, 94, 0.15));
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .brand-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      background: linear-gradient(100deg, #f9fafb 0%, #bbf7d0 45%, #4ade80 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      text-shadow: none;
+      filter: drop-shadow(0 0 24px rgba(74, 222, 128, 0.3));
+    }
+
+    .tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.1rem, 2.8vw, 2rem);
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(148, 163, 184, 0.85);
+      animation: fadeUp 1.4s ease 0.2s both;
+    }
+
+    .tagline span {
+      color: #4ade80;
+    }
+
+    /* Linha decorativa */
+    .divider {
+      width: clamp(120px, 20vw, 280px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #4ade80, transparent);
+      animation: fadeUp 1.4s ease 0.1s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { filter: drop-shadow(0 0 40px rgba(34,197,94,0.35)) drop-shadow(0 0 80px rgba(34,197,94,0.15)); }
+      50%       { filter: drop-shadow(0 0 55px rgba(34,197,94,0.55)) drop-shadow(0 0 100px rgba(34,197,94,0.25)); }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bgCanvas"></canvas>
+  <div class="bg-overlay"></div>
+
+  <div class="center">
+    <div class="logo-wrap">
+      <img class="logo-img" src="img/bonattech.png" alt="BONATTECH" />
+      <div class="brand-name">BONATTECH</div>
+    </div>
+    <div class="divider"></div>
+    <p class="tagline">Tecnologia <span>sob medida</span> para o seu negócio</p>
+  </div>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById("bgCanvas");
+      const ctx = canvas.getContext("2d");
+
+      const PARTICLE_COUNT = 90;
+      const MAX_DIST = 150;
+      const SPEED = 0.38;
+
+      let W, H, particles;
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+
+      function rand(min, max) { return Math.random() * (max - min) + min; }
+
+      function createParticles() {
+        particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+          x: rand(0, W), y: rand(0, H),
+          vx: rand(-SPEED, SPEED), vy: rand(-SPEED, SPEED),
+          r: rand(1.2, 2.6),
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < MAX_DIST) {
+              const alpha = (1 - dist / MAX_DIST) * 0.25;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(34,197,94,${alpha})`;
+              ctx.lineWidth = 0.7;
+              ctx.stroke();
+            }
+          }
+        }
+
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(74,222,128,0.50)";
+          ctx.fill();
+        });
+      }
+
+      function update() {
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > W) p.vx *= -1;
+          if (p.y < 0 || p.y > H) p.vy *= -1;
+        });
+      }
+
+      function loop() { update(); draw(); requestAnimationFrame(loop); }
+
+      resize();
+      createParticles();
+      loop();
+
+      window.addEventListener("resize", () => { resize(); createParticles(); });
+    })();
+  </script>
+
+</body>
+</html>
