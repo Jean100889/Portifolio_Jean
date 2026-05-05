@@ -63,6 +63,20 @@
       animation: pulse 4s ease-in-out infinite;
     }
 
+    .brand-name-wrap {
+      position: relative;
+    }
+
+    .brand-name-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -8px -16px;
+      border-radius: 12px;
+      background: radial-gradient(ellipse at center, rgba(74, 222, 128, 0.18), transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
     .brand-name {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(3.2rem, 8vw, 7rem);
@@ -73,8 +87,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 1;
-      text-shadow: none;
-      filter: drop-shadow(0 0 24px rgba(74, 222, 128, 0.3));
     }
 
     .tagline {
@@ -118,7 +130,7 @@
   <div class="center">
     <div class="logo-wrap">
       <img class="logo-img" src="img/bonattech.png" alt="BONATTECH" />
-      <div class="brand-name">BONATTECH</div>
+      <div class="brand-name-wrap"><div class="brand-name">BONATTECH</div></div>
     </div>
     <div class="divider"></div>
     <p class="tagline">Tecnologia <span>sob medida</span> para o seu negócio</p>

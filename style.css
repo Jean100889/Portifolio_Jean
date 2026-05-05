@@ -279,7 +279,7 @@ img {
 }
 
 /* Garante que tudo fica acima do canvas fixo */
-header, main, footer, .float-actions, .mobile-bar, .nav-overlay, .unlock-modal {
+header, main, footer, .float-actions, .mobile-bar {
   position: relative;
   z-index: 1;
 }
